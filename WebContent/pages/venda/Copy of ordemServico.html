@@ -1,0 +1,125 @@
+
+<html>
+
+<link rel="stylesheet" href="../../resources/css/bootstrap.css"
+	type="text/css">
+<link rel="stylesheet" href="../../resources/css/bootstrap.min.css"
+	type="text/css">
+
+<div>
+
+	<div id="teste" class="panel col-xs-12   ">
+		<button class=" btn	btn-primary hidden-print"
+			onclick="window.print();">imprimir</button>
+		<form name="cliForm">
+			<div class="panel-body ">
+
+
+				<table width="100%" cellpadding="2">
+					<tr>
+						<td class="col-lg-8" align="center" valign="middle" rowspan="3">
+							<img align="middle" src="resources/img/logo2.png" width="100%"
+							height="50%" />
+						</td>
+
+					</tr>
+					<tr>
+						<td class="col-lg-4 text-center">
+							<h3>Peças e Acessórios para seu Veículo</h3>
+						</td>
+					</tr>
+					<tr>
+						<td class="col-lg-4 text-center">
+							<h3>
+								<label style="font-size: 40px;"> 3685-2804 </label>
+							</h3>
+						</td>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td class="col-lg-6" colspan="2"
+							style="text-align: center; font-size: 25px;">
+							<h2>Av. Antonio C. Costa, nº 423 - Jd. Ipê - Osasco SP</h2>
+						</td>
+					</tr>
+				</table>
+
+
+				<div class="panel  col-xs-8 ">
+					<div class="control-group col-xs-8">
+						<label>CPF</label> <input ng-model="obj.cpf" id="campoCpf"
+							class="form-control" required maxlength="11"
+							placeholder="999.999.999-99" />
+					</div>
+
+					<div class="control-group col-xs-8">
+						<label>Nome</label> </span> <input type="text" ng-model="obj.nome"
+							class="form-control" required />
+					</div>
+
+					<div class="control-group col-xs-4">
+						<label>Telefone</label> <input id="campoTelefone"
+							ng-model="obj.telefone" type="text" class="form-control"
+							maxlength="9" placeholder="99999-9999" />
+					</div>
+
+					<div class="control-group col-xs-4">
+						<label>Marca</label> <input ng-model="obj.marca" type="text"
+							class="form-control" required />
+					</div>
+
+					<div class="control-group col-xs-4">
+						<label>Modelo</label> <input ng-model="obj.modelo" type="text"
+							class="form-control" required />
+					</div>
+
+					<div class="control-group col-xs-4">
+						<label>Placa</label> <input ng-model="obj.placa" id="campoPlaca"
+							type="text" class="form-control" required />
+					</div>
+
+				</div>
+
+				<div class="panel  col-xs-4 alert-info btn-group-vertical">
+
+					<h1 class="">O.S nº 00001</h1>
+					<div class="row"></div>
+					<div class="row"></div>
+					<div class="row"></div>
+					<div class="clearfix"></div>
+					<div class="clearfix"></div>
+					<div class="clearfix"></div>
+					<div class="clearfix"></div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</form>
+
+		<div class="clearfix"></div>
+
+		<div class="panel panel-default">
+			<table class="table table-striped table-bordered col-lg-12 ">
+				<thead>
+					<tr>
+						<th class="pointer col-lg-4">Nome</th>
+						<th class="pointer col-lg-1">Qtd</th>
+						<th class="pointer col-lg-2">Valor</th>
+						<th class="pointer col-lg-2">Garantia</th>
+						<th class="pointer col-lg-3">Funcionario</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="produtoComissao in produtosComissao">
+
+						<td>{{produtoComissao.modelo}}</td>
+						<td>{{produtoComissao.quantidadee}}</td>
+						<td>{{produtoComissao.valor}}</td>
+						<td>{{produtoComissao.garantia}}</td>
+						<td>{{produtoComissao.funcionario}}</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+</html>

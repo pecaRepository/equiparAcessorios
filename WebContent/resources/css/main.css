@@ -1,0 +1,239 @@
+/*	Style for visual identity BDA system.
+	18/07/2014
+	by: rhoracio	
+*/
+
+.dangerCostumer{
+	background-color: red;
+}
+
+.hackyhack {
+  position: relative;
+}
+.hackyhack .dropdown-menu {
+   left: auto !important;
+   right: auto;
+   bottom: auto;
+   top: auto;
+ }
+ 
+html,body { height: 100% }
+
+img {
+max-width: 100%;
+}
+.numeroOS{
+	text-align: center;
+ 	 margin-top: 20%;
+ 	 size: 100%;
+}
+
+@page {
+margin: 0.5cm;
+}
+@media print {
+	*{
+	background:transparent !important;
+	color:#000 !important;
+	text-shadow:none !important;
+	filter:none !important;
+	-ms-filter:none !important;
+	}
+  body * {
+    
+    margin:0;
+	padding:0;
+	line-height: 1.4em;
+  }
+  h1{
+  font-size: 200%;
+  text-align:center;
+  text-align: center;
+  margin-top: 40%;
+  }
+  #tabelaItens{
+  margin-top: -75px;
+  }
+  #os{
+  text-align: center;
+  }
+  #campo{
+height: 25px;
+}
+  #tes{
+  display: none;
+  width: 100px;
+  }
+  #principal{
+  width:21cm;
+  
+  }
+  #imprimirok{
+  	display: block;
+
+  	width:21cm;
+  	max-height:27cm;
+  	margin-left:0;
+
+  	/* --FOLHA A5
+  	width:14,8cm;
+  	height:21,0cm;
+  	
+  	*/
+  }
+  #printable, #printable * {
+    visibility: visible;
+  }
+  #printable {
+    
+    display:block;
+    width:90%;
+   	z-index:1000; 
+  }
+}
+
+body {
+	font-family: Helvetica, Verdana, sans-serif;
+	font-size: 13px;
+
+	background: #272b30 url('../img/fundoD.png') repeat center center fixed;
+}
+
+/* Custom media query */
+@media screen and (min-width: 768px) {
+	.container {
+		max-width: 100%;
+		width: 100%;
+	}
+}
+
+
+
+
+.clearfix { margin-bottom: 10px; }
+
+label { margin-bottom: 0px; font-size: 12px;  }
+
+/* Custom menu, nav */
+.navbar-inner { box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.5), 0 2px 6px rgba(0, 0, 0, 0.15); }
+.navbar-default { background-color: #F8F8F8; }
+.navbar-default .navbar-brand { font-size: 1.2em; font-weight: bold; }
+.navbar-default .navbar-brand,.navbar-default .navbar-nav>li>a {  }
+.navbar-default .navbar-nav>li>a { font-size: 1.0em; font-weight: normal;}
+.navbar-default .navbar-nav>li { transition: background ease-in-out .5s; }
+.navbar-default .navbar-nav>li:hover { background: rgba(202, 216, 236, 0.51); }
+.navbar-default .navbar-nav>.open>a,.navbar-default .navbar-nav>.open>a:hover,
+									.navbar-default .navbar-nav>.open>a:focus {
+	color: black;
+	background: rgba(202, 216, 236, 0.51);
+}
+
+div.navbar-header ul li { float: left; list-style: none; }
+
+.navbar-default .navbar-nav>li>a:hover,.navbar-default .navbar-nav>li>a:focus {
+	color: #2C3E50;
+	font-weight: normal;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.logo-navbar {
+	background: url('../images/cubo-azul-icon.png');
+	background-repeat: no-repeat;
+	height: 48px;
+	width: 48px;
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	z-index: 1000;
+	display: none;
+	float: left;
+	min-width: 160px;
+	padding: 0px;
+	font-size: 14px;
+	text-align: left;
+	list-style: none;
+	border-radius: 0px;
+}
+
+.dropdown-menu>li>a {
+	font-size: 0.9em;
+	border-bottom: 1px solid #DDD;
+	margin: 0px 0px 0px 0px;
+	padding: 5px;
+	transition: background-color ease-in-out .2s;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+	color: #262626;
+	text-decoration: none;
+	background-color: rgba(202, 216, 236, 0.51);
+}
+
+a:active, a:hover, a:focus{ outline: 0; }
+
+/* Zoom icons */
+.glyphicon-2x { font-size:17px; }
+
+
+
+
+/* Progress Bar http request */
+
+.loading-spiner-holder {
+	transition: visibility ease-in-out .5s;
+}
+.waitContainer {
+	border:1px solid #ddd;
+	box-shadow: 0 4px 23px 5px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.waitHeader {
+	background: #eee;
+	text-shadow: 0 1px 0 #FFF;
+	color: black;
+	font-family: inherit;
+	font-size: 9pt;
+	font-weight: 700;
+	line-height: 1.9;
+	border-color: #ddd;
+	border-style: solid;
+	border-width: 0px 0px 1px 0px;
+	padding: 2px;
+}
+
+.waitProgress {
+	display: block;
+	position: absolute;
+	padding: 2px 3px;
+	z-index: 99999; 
+	height: 50px;
+	left: 50%;
+	margin: -29px 0 0 -75.5px; /*
+								Respectivamente altura e largura, para resultado
+								divida por 2, altura e largura funciona no IE 6.+
+								Chrome, FF 1.5 + */
+	position: absolute;
+	top: 50%;
+	width: 151px;
+}
+
+.waitBody {
+	background: #F5F5F5;
+	border-color: gray;
+	border-style: solid;
+	border-width: 0px;
+	padding: 10px;
+}
+
+.prgbar-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	
+}
